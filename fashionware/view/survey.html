@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>TASK B</title>
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Hello Cloths</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li class="active"><a href="survey.html">Survey</a></li>
+            <li><a href = "http://www.google.com.au">Go to Google</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+      
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="container">
+       
+        <form>
+
+          <div class="form-group">
+            <p>Please rate our servies</p>
+            <ol>
+                <li>- Needs Improvement</li>
+                <li>- Satisfactory</li>
+                <li>- Good</li>
+                <li>- Very Good</li>
+                <li>- Excellent</li>
+            </ol>
+
+            <div class="col-md-4 form-group">
+              <label for="txt_num1">Durability</label>
+              <input type="number" class="form-control" id="txt_num1" placeholder="Durability" required min="1" max="5">
+            </div>
+
+            <div class="col-md-4 form-group">
+              <label for="txt_num2">Style/Design</label>
+              <input type="number" class="form-control" id="txt_num2" placeholder="Style/Design" required min="1" max="5">
+            </div>
+
+            <div class="col-md-4 form-group">
+              <label for="txt_num3">Eco Friendliness</label>
+              <input type="number" class="form-control" id="txt_num3" placeholder="Eco Friendliness" required min="1" max="5">
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="txt_num4">Customer Service</label>
+              <input type="number" class="form-control" id="txt_num4" placeholder="Customer Service" required min="1" max="5">
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="txt_num5">Quality of Product</label>
+              <input type="number" class="form-control" id="txt_num5" placeholder="Quality of Product" required min="1" max="5">
+            </div>
+
+          </div>
+
+          <div class="col-md-6 form-group">
+              <button type="submit" class="btn btn-primary" onClick="rating()"> Submit </button>
+              <button type="reset" class="btn btn-default"> Clear </button>
+            </div>
+        </form>
+
+      </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type = "text/javascript" src = "../app/js/survey.js"></script>
+
+    <footer class="navbar-default navbar-fixed-bottom">
+      <div class="container-fluid">
+        <span class="col-md-6 col-md-offset-5"> &copy; All Rights Reserved 2017 </span>
+      </div>
+    </footer>
+  </body>
+</html>
