@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>TASK B</title>
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Hello Cloths</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li class="active"><a href="register.html">Register</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href = "http://www.google.com.au">Go to Google</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+      
+      <!-- Main component for a primary marketing message or call to action -->
+
+      <div class="container">
+          <form>
+            <div class="col-md-6 form-group">
+              <label for="txtFName">First Name</label>
+              <input type="text" class="form-control" id= "txtFName" placeholder="First Name" required>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="txtLName">Last Name</label>
+              <input type="text" class="form-control" id= "txtLName" placeholder="Last Name" required>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="cbxGender">Gender</label>
+              <div class="radio">
+                <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="cbxMale" required>
+                  Male
+                </label>
+              
+                <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="cbxFemale">
+                  Female
+                </label>
+              </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="txtPhone">Phone Number</label>
+              <input type="number" class="form-control" id="txtPhone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="txtAddress">Home Address</label>
+              <input type="text" class="form-control" id= "txtAddress" placeholder="Address" required>
+            </div>
+            
+            <div class="col-md-6 form-group">
+              <label for="txtEmail">Email</label>
+              <input type="email" class="form-control" id="txtEmail" placeholder="example@email.com" required>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="txtEmail">State </label>
+              <select class="form-control">
+                <option>NSW</option>
+                <option>QLD</option>
+                <option>VIC</option>
+              </select>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="cbxRecommend">How did you lear about us? </label>
+              <div class="checkbox-group required">
+                  <input type="checkbox" name="option[]" value="option1" /> Website
+                  <input type="checkbox" name="option[]" value="option2" /> TV Ads
+                  <input type="checkbox" name="option[]" value="option3" /> Print Ads
+                  <input type="checkbox" name="option[]" value="option4" /> Friends
+              </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="cbxRecommend">Would you recommend us? </label>
+              <div class="radio">
+                <label>
+                <input type="radio" name="optionsRecommend" id="optionsYes" value="cbxYes" required>
+                  Yes
+                </label>
+              
+                <label>
+                <input type="radio" name="optionsRecommend" id="optionsNo" value="cbxNo">
+                  No
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" id="checkBtn" class="btn btn-lg btn-primary"> Submit </button>
+              <button type="reset" class="btn btn-lg btn-default"> Reset </button>
+            </div>
+          </form>
+
+      </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#checkBtn').click(function() {
+          checked = $("input[type=checkbox]:checked").length;
+
+          if(!checked) {
+            alert("You must check at least one checkbox.");
+            return false;
+          }
+
+        });
+      });
+    </script>
+    <footer class="navbar-default navbar-fixed-bottom">
+      <div class="container-fluid">
+        <span class="col-md-6 col-md-offset-5"> &copy; All Rights Reserved 2017 </span>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+

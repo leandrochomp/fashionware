@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LOGIN</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="../app/css/style_login.css" rel="stylesheet">
+</head>
+<body>
+	<div class="panel caixaLogin vcenter">
+		<div class="row">
+			<div class="col-md-12">
+				<img class="img-responsive logo"  />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 formulario">
+				<form role="form" id="FormLogin" method="post" action="../controller/loginCtrl.php">
+				  <div class="form-group">
+				    <input type="text" class="form-control icon-login" id="txtLogin" name="txtLogin" placeholder="User">
+				  </div>
+				  <div class="form-group">
+				    <input type="password" class="form-control icon-password" id="txtPassword" name="txtPassword" placeholder="Password">
+				  </div>
+                                  <span id="msg"> </span>
+				  <button type="submit" class="btn btn-default">Login</button>
+				  <a href="#">Forgot Your Password?</a>
+				</form>
+			</div>
+		</div>
+	</div>
+    
+        <script>
+		$(document).ready( function () {
+			$('#FormLogin').submit( function() {
+				var obj = this,
+				obj = $(this).serialize();
+
+				$.ajax({
+					url : $(that).attr('action'),
+					type : 'POST',
+					url  : '../model/index.php',
+					data : obj,
+					success : function (responseText) {
+						//alert(responseText);
+						document.getElementById('msg').style.color="red";
+						document.getElementById('msg').innerHTML = responseText;
+					}
+				});
+
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>
